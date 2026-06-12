@@ -1,0 +1,351 @@
+/* RESET Y FUENTE PRINCIPAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Quicksand', 'Segoe UI', Tahoma, sans-serif;
+    background-color: #fff2df;
+    position: relative;
+    color: #2e241f;
+}
+
+/* FONDO DE IMAGEN INFANTIL (IMAGEN DE FONDO) */
+.fondo-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/fondo.jpg');  /* Cambia por tu imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.18;
+    z-index: -2;
+}
+
+/* Capa de color brillante detrás */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 10% 30%, rgba(255,215,0,0.2), rgba(255,105,180,0.1));
+    z-index: -1;
+}
+
+/* HEADER */
+.header {
+    background: linear-gradient(135deg, #ffb347, #ff6b6b);
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    border-bottom: 5px solid #ffdd77;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.empresa {
+    font-size: 2.7rem;
+    font-weight: 800;
+    color: #ffff88;
+    text-shadow: 4px 4px 0 #d63447;
+    letter-spacing: 2px;
+}
+
+.tagline {
+    font-size: 1.2rem;
+    background: #f9ed69;
+    display: inline-block;
+    padding: 0.3rem 1rem;
+    border-radius: 50px;
+    font-weight: bold;
+    color: #d64531;
+}
+
+.btn-whatsapp-flotante {
+    background-color: #25D366;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 40px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.btn-whatsapp-flotante:hover {
+    background-color: #128C7E;
+    transform: scale(1.03);
+}
+
+/* Títulos sección */
+.titulo-seccion {
+    text-align: center;
+    font-size: 2rem;
+    background: rgba(255,240,180,0.8);
+    display: inline-block;
+    padding: 0.5rem 1.8rem;
+    border-radius: 60px;
+    margin: 1.5rem auto;
+    backdrop-filter: blur(4px);
+    color: #c0392b;
+    border: 2px solid #ffb347;
+}
+
+/* Galeria de paquetes - grid responsivo */
+.paquetes-section {
+    padding: 20px;
+    text-align: center;
+}
+
+.galeria-paquetes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+    gap: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.tarjeta-paquete {
+    background: #fffef7;
+    border-radius: 50px 30px 50px 30px;
+    overflow: hidden;
+    box-shadow: 0 20px 30px -10px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+    border: 2px solid #fbcb7b;
+}
+
+.tarjeta-paquete:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 35px -8px rgba(0,0,0,0.3);
+}
+
+.imagen-paquete img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    border-bottom: 5px solid #ffa62e;
+}
+
+.contenido-paquete {
+    padding: 1.2rem;
+}
+
+.contenido-paquete h3 {
+    font-size: 1.7rem;
+    color: #e67e22;
+    margin-bottom: 10px;
+}
+
+.precio {
+    font-size: 1.8rem;
+    font-weight: 800;
+    background: #ffeaac;
+    display: inline-block;
+    padding: 0.2rem 1rem;
+    border-radius: 50px;
+    color: #b64926;
+}
+
+.lista-detalles {
+    text-align: left;
+    margin: 15px 0;
+    list-style: none;
+}
+
+.lista-detalles li {
+    margin: 8px 0;
+    font-weight: 500;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.emoji-fondo {
+    font-size: 1.4rem;
+    letter-spacing: 4px;
+    margin-top: 10px;
+}
+
+/* GALERIA DE IMAGENES ADICIONAL */
+.galeria-imagenes {
+    background: rgba(255,235,200,0.7);
+    padding: 20px;
+    margin: 30px 0;
+    border-radius: 50px;
+}
+
+.grid-galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.foto-galeria {
+    overflow: hidden;
+    border-radius: 35px;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.2);
+    transition: 0.2s;
+    border: 3px solid #ffa559;
+}
+
+.foto-galeria img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    transition: 0.3s;
+}
+
+.foto-galeria:hover img {
+    transform: scale(1.08);
+}
+
+/* CONTACTO WHATSAPP */
+.contacto-whatsapp {
+    background: linear-gradient(110deg, #ffd966, #ffb347);
+    margin: 40px 20px;
+    border-radius: 65px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.cajon-contacto h3 {
+    font-size: 2rem;
+    color: #2c3e2f;
+}
+
+.boton-whatsapp-grande {
+    background-color: #25D366;
+    padding: 15px 35px;
+    font-size: 1.5rem;
+    display: inline-block;
+    border-radius: 60px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 20px 0;
+    transition: 0.2s;
+}
+
+.boton-whatsapp-grande:hover {
+    background-color: #128C7E;
+    transform: scale(1.02);
+}
+
+.telefono-directo {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* FORMULARIO PHP */
+.formulario-contacto {
+    max-width: 700px;
+    margin: 30px auto;
+    background: rgba(255,250,225,0.95);
+    padding: 30px;
+    border-radius: 70px;
+    box-shadow: 0 12px 20px rgba(0,0,0,0.1);
+}
+
+.form-pikishow .campo-form {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.campo-form label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 6px;
+}
+
+.campo-form input, .campo-form textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 40px;
+    border: 2px solid #ffb86b;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.btn-enviar {
+    background: #f0932b;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-enviar:hover {
+    background: #e67e22;
+    transform: scale(0.98);
+}
+
+/* Footer */
+.footer {
+    background: #222;
+    color: #ffdd99;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 30px;
+}
+
+.social-icons a {
+    color: #ffb347;
+    font-size: 1.8rem;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.2s;
+}
+
+/* boton flotante whatsapp */
+.whatsapp-float {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background-color: #25D366;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    box-shadow: 0 4px 12px black;
+    z-index: 99;
+    transition: 0.2s;
+}
+
+.whatsapp-float:hover {
+    background-color: #128C7E;
+    transform: scale(1.1);
+}
+
+@media (max-width: 700px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+        gap: 12px;
+    }
+    .empresa {
+        font-size: 2rem;
+    }
+}
